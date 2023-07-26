@@ -14,6 +14,7 @@
     "/status": {
       "get": {
         "description": "This API is used to check the status of the server.",
+        "operationId": "status",
         "responses": {
           "200": {
             "description": "OK",
@@ -36,6 +37,7 @@
     "/login": {
       "post": {
         "description": "This API is used to login into auth server.\n<table>\n  <tr>\n  <th>Field</th>\n  <th>Possible values</th>\n  <th>Mandatory/Optional</th>\n  </tr>\n  <tr>\n    <td>username</td>\n    <td>admin</td>\n    <td>Mandatory</td>\n   </tr>\n   <tr>\n    <td>password</td>\n    <td>pass123</td>\n    <td>Mandatory</td>\n  </tr>\n</table>\n",
+        "operationId": "login",
         "responses": {
           "200": {
             "description": "OK",
@@ -87,6 +89,7 @@
     "/users": {
       "get": {
         "description": "This API is used to get the list of users",
+        "operationId": "users",
         "responses": {
           "200": {
             "description": "OK",
@@ -116,6 +119,7 @@
     "/getUser/{user_id}": {
       "get": {
         "description": "This API is used to get the details of an user by passing uid in the URL",
+        "operationId": "getUserById",
         "responses": {
           "200": {
             "description": "OK",
@@ -151,6 +155,7 @@
     "/update/password": {
       "post": {
         "description": "This API is used to update the password\n<table>\n  <tr>\n    <th>Field</th>\n    <th>Possible values</th>\n    <th>Mandatory/Optional</th>\n  </tr>\n  <tr>\n    <td>username</td>\n    <td>admin</td>\n    <td>Optional</td>\n  </tr>\n  <tr>\n    <td>old_password</td>\n    <td>pass123</td>\n    <td>Mandatory</td>\n  </tr>\n  <tr>\n    <td>new_password</td>\n    <td>pass1234</td>\n    <td>Mandatory</td>\n  </tr>\n</table>\n",
+        "operationId": "updatePassword",
         "responses": {
           "200": {
             "description": "OK",
@@ -188,6 +193,7 @@
     },
     "/create": {
       "post": {
+        "operationId": "create",
         "description": "This API is used to create a new user.\n<table>\n  <tr>\n    <th>Field</th>\n    <th>Possible values</th>\n    <th>Mandatory/Optional</th>\n  </tr>\n  <tr>\n    <td>username</td>\n    <td>user1</td>\n    <td>Mandatory</td>\n  </tr>\n  <tr>\n    <td>password</td>\n    <td>pass123</td>\n    <td>Mandatory</td>\n  </tr>\n  <tr>\n    <td>role</td>\n    <td>admin</td>\n    <td>Mandatory</td>\n  </tr>\n  <tr>\n    <td>email</td>\n    <td>user1@gmail.com</td>\n    <td>Optional</td>\n  </tr>\n  <tr>\n    <td>name</td>\n    <td>admin</td>\n    <td>Optional</td>\n  </tr>\n</table>\n",
         "responses": {
           "200": {
@@ -233,6 +239,7 @@
     },
     "/reset/password": {
       "post": {
+        "operationId": "resetPassword",
         "description": "This API is used to reset the password of a user.\n<table>\n  <tr>\n    <th>Field</th>\n    <th>Possible values</th>\n    <th>Mandatory/Optional</th>\n  </tr>\n  <tr>\n    <td>username</td>\n    <td>test1</td>\n    <td>Mandatory</td>\n  </tr>\n   <tr>\n    <td>new_password</td>\n    <td>pass1234</td>\n    <td>Mandatory</td>\n  </tr>\n</table>\n",
         "responses": {
           "200": {
@@ -270,6 +277,7 @@
     },
     "/update/details": {
       "post": {
+        "operationId": "updateDetails",
         "description": "This API is used to update the details of a user.\n<table>\n  <tr>\n    <th>Field</th>\n    <th>Possible values</th>\n    <th>Mandatory/Optional</th>\n  </tr>\n  <tr>\n    <td>name</td>\n    <td>test1</td>\n    <td>Optional</td>\n  </tr>\n   <tr>\n    <td>email</td>\n    <td>test1@test.com</td>\n    <td>Optional</td>\n  </tr>\n</table>\n",
         "responses": {
           "200": {
@@ -307,6 +315,7 @@
     },
     "/update/state": {
       "post": {
+        "operationId": "updateState",
         "description": "This API is used to update the state of a user.\n<table>\n  <tr>\n    <th>Field</th>\n    <th>Possible values</th>\n    <th>Mandatory/Optional</th>\n  </tr>\n  <tr>\n    <td>username</td>\n    <td>test1</td>\n    <td>Mandatory</td>\n  </tr>\n   <tr>\n    <td>is_deactivate</td>\n    <td>true</td>\n    <td>Mandatory</td>\n  </tr>\n</table>\n",
         "responses": {
           "200": {
@@ -344,6 +353,7 @@
     },
     "/create_project": {
       "post": {
+        "operationId": "createProject",
         "description": "This API is used to create a project\n<table>\n  <tr>\n    <th>Field</th>\n    <th>Possible values</th>\n    <th>Mandatory/Optional</th>\n  </tr>\n  <tr>\n    <td>project_name</td>\n    <td>My project</td>\n    <td>Mandatory</td>\n  </tr>\n</table>\n",
         "responses": {
           "200": {
@@ -395,6 +405,7 @@
     },
     "/get_project/{project_id}": {
       "get": {
+        "operationId": "getProjectById",
         "description": "This API is used to get details of a project with given project ID\n",
         "responses": {
           "200": {
@@ -444,6 +455,7 @@
     },
     "/get_user_with_project/{username}": {
       "get": {
+        "operationId": "getUserWithProject",
         "description": "This API is used to get details of a project for a user\n",
         "responses": {
           "200": {
@@ -498,6 +510,7 @@
     },
     "/list_projects": {
       "get": {
+        "operationId": "listProject",
         "description": "This API is used to get project details of logged in user\n",
         "responses": {
           "200": {
@@ -537,6 +550,7 @@
     },
     "/get_projects_stats": {
       "get": {
+        "operationId": "getProjectStats",
         "description": "This API is used to get overall stats for all the projects(accessible only to admin).\n",
         "responses": {
           "200": {
@@ -573,6 +587,7 @@
     },
     "/update_projectname": {
       "post": {
+        "operationId": "updateProject",
         "description": "This API is used to update a project name\n<table>\n  <tr>\n    <th>Field</th>\n    <th>Possible values</th>\n    <th>Mandatory/Optional</th>\n  </tr>\n  <tr>\n    <td>project_id</td>\n    <td>384f6666-3b7d-4381-b5b5-bfc4c3dedbc8</td>\n    <td>Mandatory</td>\n  </tr>\n   <tr>\n    <td>project_name</td>\n    <td>admin's project</td>\n    <td>Mandatory</td>\n  </tr>\n</table>\n",
         "responses": {
           "200": {
@@ -610,6 +625,7 @@
     },
     "/send_invitation": {
       "post": {
+        "operationId": "sendInvitiation",
         "description": "This API is used to send project invite to an user\n<table>\n  <tr>\n    <th>Field</th>\n    <th>Possible values</th>\n    <th>Mandatory/Optional</th>\n  </tr>\n  <tr>\n    <td>project_id</td>\n    <td>384f6666-3b7d-4381-b5b5-bfc4c3dedbc8</td>\n    <td>Mandatory</td>\n  </tr>\n   <tr>\n    <td>user_id</td>\n    <td>3bdc0bd9-fc46-433b-ac21-05d555566c46</td>\n    <td>Mandatory</td>\n  </tr>\n  <tr>\n    <td>role</td>\n    <td>Viewer</td>\n    <td>Mandatory</td>\n  </tr>\n</table>\n",
         "responses": {
           "200": {
@@ -657,6 +673,7 @@
     },
     "/accept_invitation": {
       "post": {
+        "operationId": "acceptInvitation",
         "description": "This API is used to accept a project invite\n<table>\n  <tr>\n    <th>Field</th>\n    <th>Possible values</th>\n    <th>Mandatory/Optional</th>\n  </tr>\n  <tr>\n    <td>project_id</td>\n    <td>384f6666-3b7d-4381-b5b5-bfc4c3dedbc8</td>\n    <td>Mandatory</td>\n  </tr>\n   <tr>\n    <td>user_id</td>\n    <td>3bdc0bd9-fc46-433b-ac21-05d555566c46</td>\n    <td>Mandatory</td>\n  </tr>\n</table>\n",
         "responses": {
           "200": {
@@ -694,6 +711,7 @@
     },
     "/decline_invitation": {
       "post": {
+        "operationId": "declinedInvitation",
         "description": "This API is used to decline a project invite\n<table>\n  <tr>\n    <th>Field</th>\n    <th>Possible values</th>\n    <th>Mandatory/Optional</th>\n  </tr>\n  <tr>\n    <td>project_id</td>\n    <td>384f6666-3b7d-4381-b5b5-bfc4c3dedbc8</td>\n    <td>Mandatory</td>\n  </tr>\n   <tr>\n    <td>user_id</td>\n    <td>3bdc0bd9-fc46-433b-ac21-05d555566c46</td>\n    <td>Mandatory</td>\n  </tr>\n</table>\n",
         "responses": {
           "200": {
@@ -731,6 +749,7 @@
     },
     "/remove_invitation": {
       "post": {
+        "operationId": "removeInvitation",
         "description": "This API is used to revoke a project invite or remove a project member\n<table>\n  <tr>\n    <th>Field</th>\n    <th>Possible values</th>\n    <th>Mandatory/Optional</th>\n  </tr>\n  <tr>\n    <td>project_id</td>\n    <td>384f6666-3b7d-4381-b5b5-bfc4c3dedbc8</td>\n    <td>Mandatory</td>\n  </tr>\n   <tr>\n    <td>user_id</td>\n    <td>3bdc0bd9-fc46-433b-ac21-05d555566c46</td>\n    <td>Mandatory</td>\n  </tr>\n</table>\n",
         "responses": {
           "200": {
@@ -768,6 +787,7 @@
     },
     "/leave_project": {
       "post": {
+        "operationId": "leaveProject",
         "description": "This API is used to leave a project\n<table>\n  <tr>\n    <th>Field</th>\n    <th>Possible values</th>\n    <th>Mandatory/Optional</th>\n  </tr>\n  <tr>\n    <td>project_id</td>\n    <td>384f6666-3b7d-4381-b5b5-bfc4c3dedbc8</td>\n    <td>Mandatory</td>\n  </tr>\n   <tr>\n    <td>user_id</td>\n    <td>3bdc0bd9-fc46-433b-ac21-05d555566c46</td>\n    <td>Mandatory</td>\n  </tr>\n</table>\n",
         "responses": {
           "200": {
