@@ -1,9 +1,9 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "title" : "Litmus Portal Authentication API",
     "version" : "2.7.0",
-    "description" : "Litmus Portal Authentication APIs are used to authenticate the identity of a user and to perform several user-specific tasks like :\n <li>Update Profile</li>\n <li>Change Password</li>\n <li>Reset Password</li>\n <li>Create new users etc.</li>\n"
+    "title" : "Litmus Portal Authentication API",
+    "description" : ""
   },
   "host" : "stress.harness.io",
   "basePath" : "/gateway/ng/api",
@@ -34,14 +34,14 @@
     },
     "/login" : {
       "post" : {
-        "description" : "This API is used to login into auth server.\n<table>\n  <tr>\n  <th>Field</th>\n  <th>Possible values</th>\n  <th>Mandatory/Optional</th>\n  </tr>\n  <tr>\n    <td>username</td>\n    <td>admin</td>\n    <td>Mandatory</td>\n   </tr>\n   <tr>\n    <td>password</td>\n    <td>pass123</td>\n    <td>Mandatory</td>\n  </tr>\n</table>\n",
+        "description" : "",
         "responses" : {
           "200" : {
             "description" : "OK",
             "examples" : {
               "application/json" : {
                 "access_token" : "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjcxMjY4MjMsInJvbGUiOiJhZG1pbiIsInVpZCI6ImY4MDM2YzUxLTBkNzktNGNkNy1hN2QwLTQ1ZGNhZGI4MGVlYiIsInVzZXJuYW1lIjoiYWRtaW4ifQ.zNIMwocHgmguwtGFupV54UfcfwEdaRO1_xB2ilalqn0fp-JE0ujkHT3gDyepnEGSRm2j1eTopPgtvyRVPb7gGA",
-                "expires_in" : 86400,
+                "expires_in" : "86400",
                 "type" : "Bearer"
               }
             },
@@ -62,7 +62,8 @@
             }
           }
         },
-        "parameters" : [ {
+        "parameters" : [
+          {
             "name" : "body",
             "in" : "body",
             "schema" : {
@@ -72,7 +73,8 @@
                 "password" : "admin"
               }
             }
-          } ],
+          }
+        ],
         "consumes" : ["application/json"],
         "produces" : ["application/json"]
       }
