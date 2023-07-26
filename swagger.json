@@ -1,7 +1,10 @@
 {
   "swagger": "2.0",
   "host": "localhost:3000",
-  "schemes": ["https", "http"],
+  "schemes": [
+    "https",
+    "http"
+  ],
   "info": {
     "title": "Litmus Portal Authentication API",
     "version": "2.7.0",
@@ -25,7 +28,9 @@
           }
         },
         "parameters": [],
-        "produces": ["application/json"]
+        "produces": [
+          "application/json"
+        ]
       }
     },
     "/login": {
@@ -71,8 +76,12 @@
             }
           }
         ],
-        "consumes": ["application/json"],
-        "produces": ["application/json"]
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ]
       }
     },
     "/users": {
@@ -99,7 +108,9 @@
           }
         },
         "parameters": [],
-        "produces": ["application/json"]
+        "produces": [
+          "application/json"
+        ]
       }
     },
     "/getUser/{user_id}": {
@@ -132,7 +143,9 @@
             "type": "string"
           }
         ],
-        "produces": ["application/json"]
+        "produces": [
+          "application/json"
+        ]
       }
     },
     "/update/password": {
@@ -165,8 +178,12 @@
             }
           }
         ],
-        "consumes": ["application/json"],
-        "produces": ["application/json"]
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ]
       }
     },
     "/create": {
@@ -206,8 +223,12 @@
             }
           }
         ],
-        "consumes": ["application/json"],
-        "produces": ["application/json"]
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ]
       }
     },
     "/reset/password": {
@@ -239,8 +260,12 @@
             }
           }
         ],
-        "consumes": ["application/json"],
-        "produces": ["application/json"]
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ]
       }
     },
     "/update/details": {
@@ -272,8 +297,12 @@
             }
           }
         ],
-        "consumes": ["application/json"],
-        "produces": ["application/json"]
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ]
       }
     },
     "/update/state": {
@@ -305,8 +334,12 @@
             }
           }
         ],
-        "consumes": ["application/json"],
-        "produces": ["application/json"]
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ]
       }
     },
     "/create_project": {
@@ -352,8 +385,12 @@
             }
           }
         ],
-        "consumes": ["application/json"],
-        "produces": ["application/json"]
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ]
       }
     },
     "/get_project/{project_id}": {
@@ -400,7 +437,9 @@
             "type": "string"
           }
         ],
-        "produces": ["application/json"]
+        "produces": [
+          "application/json"
+        ]
       }
     },
     "/get_user_with_project/{username}": {
@@ -452,7 +491,9 @@
             "type": "string"
           }
         ],
-        "produces": ["application/json"]
+        "produces": [
+          "application/json"
+        ]
       }
     },
     "/list_projects": {
@@ -489,7 +530,9 @@
           }
         },
         "parameters": [],
-        "produces": ["application/json"]
+        "produces": [
+          "application/json"
+        ]
       }
     },
     "/get_projects_stats": {
@@ -523,7 +566,9 @@
           }
         },
         "parameters": [],
-        "produces": ["application/json"]
+        "produces": [
+          "application/json"
+        ]
       }
     },
     "/update_projectname": {
@@ -555,8 +600,12 @@
             }
           }
         ],
-        "consumes": ["application/json"],
-        "produces": ["application/json"]
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ]
       }
     },
     "/send_invitation": {
@@ -598,8 +647,12 @@
             }
           }
         ],
-        "consumes": ["application/json"],
-        "produces": ["application/json"]
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ]
       }
     },
     "/accept_invitation": {
@@ -631,8 +684,12 @@
             }
           }
         ],
-        "consumes": ["application/json"],
-        "produces": ["application/json"]
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ]
       }
     },
     "/decline_invitation": {
@@ -664,8 +721,12 @@
             }
           }
         ],
-        "consumes": ["application/json"],
-        "produces": ["application/json"]
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ]
       }
     },
     "/remove_invitation": {
@@ -697,8 +758,12 @@
             }
           }
         ],
-        "consumes": ["application/json"],
-        "produces": ["application/json"]
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ]
       }
     },
     "/leave_project": {
@@ -730,87 +795,12 @@
             }
           }
         ],
-        "consumes": ["application/json"],
-        "produces": ["application/json"]
-      }
-    },
-    "/get_owner_projects": {
-      "get": {
-        "description": "This API is used to list all the project IDs in which the user is the owner\n",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "examples": {
-              "application/json": {
-                "data": ["0ecf9907-238d-4000-ac2f-3dbe38bc8e64"]
-              }
-            },
-            "schema": {
-              "type": "object"
-            }
-          }
-        },
-        "parameters": [],
-        "produces": ["application/json"]
-      }
-    },
-    "/get_project_role/{project_id}": {
-      "get": {
-        "description": "This API is used to fetch the role of the user in the given project\n",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "examples": {
-              "application/json": {
-                "role": "Owner"
-              }
-            },
-            "schema": {
-              "type": "object"
-            }
-          }
-        },
-        "parameters": [],
-        "produces": ["application/json"]
-      }
-    },
-    "/get_project_members/{project_id}/{state}": {
-      "get": {
-        "description": "This API is used to fetch members of the project based on the invitation state\n<table>\n  <tr>\n    <th>Possible values of state</th>\n  </tr>\n  <tr>\n    <td>not_accepted</td>\n    <td>accepted</td>\n    <td>all</td>\n  </tr>\n</table>\n",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "examples": {
-              "application/json": {
-                "data": [
-                  {
-                    "userID": "4ded0007-ab3c-4376-9605-14654559ff6c",
-                    "username": "admin",
-                    "email": "admin@gmail.com",
-                    "name": "admin",
-                    "role": "Owner",
-                    "invitation": "Accepted",
-                    "joinedAt": 1690264328
-                  },
-                  {
-                    "userID": "345d0007-ab3c-4376-9605-347y3949ff6c",
-                    "username": "john",
-                    "email": "john@gmail.com",
-                    "name": "john doe",
-                    "role": "Editor",
-                    "invitation": "Accepted",
-                    "joinedAt": 1690245328
-                  }
-                ]
-              }
-            },
-            "schema": {
-              "type": "object"
-            }
-          }
-        },
-        "parameters": [],
-        "produces": ["application/json"]
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ]
       }
     }
   }
